@@ -1,9 +1,11 @@
+import Marquee from 'react-fast-marquee'
 import {Component} from 'react'
 import './index.css'
 import TabItem from '../TabItem/index'
 import AppItem from '../AppItem/index'
 
 const tabsList = [
+  {tabId: 'ALL', displayText: 'All'},
   {tabId: 'SOCIAL', displayText: 'Social'},
   {tabId: 'GAMES', displayText: 'Games'},
   {tabId: 'NEWS', displayText: 'News'},
@@ -17,6 +19,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/social-facebook.png',
     category: 'SOCIAL',
+    allApps: 'ALL',
   },
   {
     appId: 1,
@@ -24,6 +27,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/social-messenger.png',
     category: 'SOCIAL',
+    allApps: 'ALL',
   },
   {
     appId: 2,
@@ -31,6 +35,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/social-whatsapp.png',
     category: 'SOCIAL',
+    allApps: 'ALL',
   },
   {
     appId: 3,
@@ -38,6 +43,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/social-instagram.png',
     category: 'SOCIAL',
+    allApps: 'ALL',
   },
   {
     appId: 4,
@@ -45,6 +51,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/social-snapchat.png',
     category: 'SOCIAL',
+    allApps: 'ALL',
   },
   {
     appId: 5,
@@ -52,6 +59,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/social-twitter.png',
     category: 'SOCIAL',
+    allApps: 'ALL',
   },
   {
     appId: 6,
@@ -59,6 +67,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/social-pinterest.png',
     category: 'SOCIAL',
+    allApps: 'ALL',
   },
   {
     appId: 7,
@@ -66,6 +75,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/social-wechat.png',
     category: 'SOCIAL',
+    allApps: 'ALL',
   },
   {
     appId: 8,
@@ -73,6 +83,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/social-linkedin.png',
     category: 'SOCIAL',
+    allApps: 'ALL',
   },
   {
     appId: 9,
@@ -80,6 +91,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/social-telegram.png',
     category: 'SOCIAL',
+    allApps: 'ALL',
   },
   {
     appId: 10,
@@ -87,6 +99,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/games-subway-surfers.png',
     category: 'GAMES',
+    allApps: 'ALL',
   },
   {
     appId: 11,
@@ -94,6 +107,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/games-crossy-road.png',
     category: 'GAMES',
+    allApps: 'ALL',
   },
   {
     appId: 12,
@@ -101,6 +115,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/games-super-chef.png',
     category: 'GAMES',
+    allApps: 'ALL',
   },
   {
     appId: 13,
@@ -108,6 +123,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/games-angry-birds.png',
     category: 'GAMES',
+    allApps: 'ALL',
   },
   {
     appId: 14,
@@ -115,6 +131,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/games-hill-climb-2.png',
     category: 'GAMES',
+    allApps: 'ALL',
   },
   {
     appId: 15,
@@ -122,6 +139,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/games-temple-run.png',
     category: 'GAMES',
+    allApps: 'ALL',
   },
   {
     appId: 16,
@@ -129,6 +147,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/games-dr-driving.png',
     category: 'GAMES',
+    allApps: 'ALL',
   },
   {
     appId: 17,
@@ -136,6 +155,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/games-smurfs-bubble.png',
     category: 'GAMES',
+    allApps: 'ALL',
   },
   {
     appId: 18,
@@ -143,6 +163,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/games-grade-learning.png',
     category: 'GAMES',
+    allApps: 'ALL',
   },
   {
     appId: 19,
@@ -150,6 +171,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/games-my-talking-tom.png',
     category: 'GAMES',
+    allApps: 'ALL',
   },
   {
     appId: 20,
@@ -157,6 +179,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/news-inshorts.png',
     category: 'NEWS',
+    allApps: 'ALL',
   },
   {
     appId: 21,
@@ -164,6 +187,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/news-way2news.png',
     category: 'NEWS',
+    allApps: 'ALL',
   },
   {
     appId: 22,
@@ -171,6 +195,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/news-google-news.png',
     category: 'NEWS',
+    allApps: 'ALL',
   },
   {
     appId: 23,
@@ -178,6 +203,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/news-flipboard.png',
     category: 'NEWS',
+    allApps: 'ALL',
   },
   {
     appId: 24,
@@ -185,6 +211,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/news-smart-news.png',
     category: 'NEWS',
+    allApps: 'ALL',
   },
   {
     appId: 25,
@@ -192,6 +219,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/news-bbc-news.png',
     category: 'NEWS',
+    allApps: 'ALL',
   },
   {
     appId: 26,
@@ -199,6 +227,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/news-cnn-news.png',
     category: 'NEWS',
+    allApps: 'ALL',
   },
   {
     appId: 27,
@@ -206,6 +235,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/news-daily-wire.png',
     category: 'NEWS',
+    allApps: 'ALL',
   },
   {
     appId: 28,
@@ -213,6 +243,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/news-ap-news.png',
     category: 'NEWS',
+    allApps: 'ALL',
   },
   {
     appId: 29,
@@ -220,6 +251,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/news-news-break.png',
     category: 'NEWS',
+    allApps: 'ALL',
   },
   {
     appId: 30,
@@ -227,6 +259,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/food-zomato.png',
     category: 'FOOD',
+    allApps: 'ALL',
   },
   {
     appId: 31,
@@ -234,6 +267,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/food-swiggy.png',
     category: 'FOOD',
+    allApps: 'ALL',
   },
   {
     appId: 32,
@@ -241,6 +275,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/food-dominos.png',
     category: 'FOOD',
+    allApps: 'ALL',
   },
   {
     appId: 33,
@@ -248,6 +283,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/food-all-in-one.png',
     category: 'FOOD',
+    allApps: 'ALL',
   },
   {
     appId: 34,
@@ -255,6 +291,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/food-insta-cart.png',
     category: 'FOOD',
+    allApps: 'ALL',
   },
   {
     appId: 35,
@@ -262,6 +299,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/food-saucey.png',
     category: 'FOOD',
+    allApps: 'ALL',
   },
   {
     appId: 36,
@@ -269,6 +307,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/food-waitr.png',
     category: 'FOOD',
+    allApps: 'ALL',
   },
   {
     appId: 37,
@@ -276,6 +315,7 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/food-grubhub.png',
     category: 'FOOD',
+    allApps: 'ALL',
   },
   {
     appId: 38,
@@ -283,18 +323,20 @@ const appsList = [
     imageUrl:
       'https://assets.ccbp.in/frontend/react-js/app-store/food-mercato.png',
     category: 'FOOD',
+    allApps: 'ALL',
   },
   {
     appId: 39,
     appName: 'DOT',
     imageUrl: 'https://assets.ccbp.in/frontend/react-js/app-store/food-dot.png',
     category: 'FOOD',
+    allApps: 'ALL',
   },
 ]
 
 // Write your code here
 class AppStore extends Component {
-  state = {activeTabId: tabsList[0].tabId, searchInput: ''}
+  state = {activeTabId: tabsList[0].tabId, searchInput: '', isMode: false}
 
   onPressTab = tabId => {
     this.setState({activeTabId: tabId})
@@ -302,9 +344,17 @@ class AppStore extends Component {
 
   getFilteredList = () => {
     const {activeTabId} = this.state
-    const filteredList = appsList.filter(
-      eachOne => eachOne.category === activeTabId,
-    )
+    console.log(activeTabId)
+
+    let filteredList = null
+
+    if (activeTabId === 'ALL') {
+      filteredList = appsList.filter(eachOne => eachOne.allApps === activeTabId)
+    } else {
+      filteredList = appsList.filter(
+        eachOne => eachOne.category === activeTabId,
+      )
+    }
     return filteredList
   }
 
@@ -312,22 +362,58 @@ class AppStore extends Component {
     this.setState({searchInput: event.target.value})
   }
 
+  onChangeMode = () => {
+    const {isMode} = this.state
+
+    if (isMode === false) {
+      this.setState({isMode: true})
+    } else {
+      this.setState({isMode: false})
+    }
+  }
+
   render() {
     const filteredList = this.getFilteredList()
-    const {activeTabId, searchInput} = this.state
+    const {activeTabId, searchInput, isMode} = this.state
 
     const searchResults = filteredList.filter(everyItem =>
       everyItem.appName.toLowerCase().includes(searchInput.toLowerCase()),
     )
 
+    let classNames
+    let buttonName
+    let btnClassName
+    let classTxtName
+
+    if (isMode) {
+      classNames = 'bg-containers'
+      buttonName = 'Light Mode'
+      btnClassName = 'light'
+      classTxtName = 'searchBoxs'
+    } else {
+      classNames = 'bg-container'
+      buttonName = 'Dark Mode'
+      btnClassName = 'dark'
+      classTxtName = 'searchBox'
+    }
+
     return (
-      <div className="bg-container">
+      <div className={classNames}>
         <div className="card-container">
-          <h1 className="heading">App Store</h1>
+          <div className="mode">
+            <h1 className="heading">App Store</h1>
+            <button
+              type="button"
+              className={btnClassName}
+              onClick={this.onChangeMode}
+            >
+              {buttonName}
+            </button>
+          </div>
           <div className="searchInputContainer">
             <input
               type="search"
-              className="searchBox"
+              className={classTxtName}
               placeholder="Search"
               onChange={this.onChangeInputValue}
             />
@@ -353,6 +439,9 @@ class AppStore extends Component {
             ))}
           </ul>
         </div>
+        <Marquee className="color">
+          &#169; My App Store [Please check the below link for code].
+        </Marquee>
       </div>
     )
   }

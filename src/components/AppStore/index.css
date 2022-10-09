@@ -7,6 +7,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+}
+
+.bg-containers {
+  background: radial-gradient(
+    circle at 10% 20%,
+    rgb(69, 86, 102) 0%,
+    rgb(34, 34, 34) 90%
+  );
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
 }
 
 .card-container {
@@ -41,6 +56,17 @@
   flex-grow: 1;
 }
 
+.searchBoxs {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  flex-grow: 1;
+  color: #fff1eb;
+}
+
 .searchIcon {
   width: 24px;
   height: 24px;
@@ -67,4 +93,42 @@
   align-items: center;
   flex-wrap: wrap;
   width: 50%;
+}
+
+.mode {
+  display: flex;
+  align-items: center;
+}
+
+.light {
+  background-color: darkgray;
+  color: #414141;
+  font-family: bree serif;
+  font-weight: bolder;
+  border-radius: 5px;
+  border-width: 0px;
+  padding: 5px;
+  margin-left: 30px;
+  margin-top: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dark {
+  background-color: #414141;
+  color: white;
+  font-family: bree serif;
+  font-weight: bolder;
+  border-radius: 5px;
+  border-width: 0px;
+  padding: 5px;
+  margin-left: 30px;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.color {
+  color: tomato;
+  font-family: bree Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 16px;
 }
